@@ -12,12 +12,4 @@ export default {
     title: 'Blog',
     type: 'page'
   },
-  todolist: {
-    title: 'Todo',
-    type: 'page',
-    contact: {
-      display: 'hidden'
-    },
-    href: '/todolist'
-  }
 }
