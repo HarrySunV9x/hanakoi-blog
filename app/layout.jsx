@@ -42,7 +42,9 @@ export default async function RootLayout({ children }) {
       <Head
       // ... Your additional head options
       >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
+        {
+          <script type="text/javascript" src="/live2dcubismcore.min.js"></script>
+        }
       </Head>
       <body>
         <Live2DPage/>
