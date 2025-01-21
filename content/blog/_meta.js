@@ -1,5 +1,5 @@
 export default {
-  codeAbility: "编码能力",
+  cpp: "C++",
   UnrealEngine: "Unreal Engine",
   AndroidDeveloper: "Android Developer",
 }
