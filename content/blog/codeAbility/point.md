@@ -119,7 +119,7 @@ std::unique_ptr<int> p2 = std::move(p1);  // p1 的所有权转移给 p2
 
 当类A被share_ptr管理，且在类A的成员函数里需要把当前类对象作为参数传给其他函数时，就需要传递一个指向自身的share_ptr。
 
-```CPP
+```cpp
 #include <memory>
 #include <iostream>
  
