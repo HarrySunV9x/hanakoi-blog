@@ -49,7 +49,7 @@ GenerateProjectFiles.bat
 
 UE5中，渲染的大体流程如图：
 
-![image-20250124104600371](.\RenderThread.png)
+![image-20250124104600371](./RenderThread.png)
 
 **Game Thread**：生成渲染所需的**基础数据**。如物体变换信息、材质参数、光源属性。
 
@@ -62,7 +62,7 @@ UE5中，渲染的大体流程如图：
 ## 并行渲染
 
 在线程内部的实现机制上，也采用了并行渲染的方式：
-![image-20250124110523254](.\ParallelRendering.png)
+![image-20250124110523254](./ParallelRendering.png)
 
 TODO..
 
@@ -83,7 +83,7 @@ int32 WINAPI WinMain(_In_ HINSTANCE hInInstance, _In_opt_ HINSTANCE hPrevInstanc
 
 Main会一路调用到FEngineLoop::PreInit。
 
-![image-20250124164039433](.\EnginePreInit.png)
+![image-20250124164039433](./EnginePreInit.png)
 
 从FEngineLoop::PreInit开始初始化的流程：
 

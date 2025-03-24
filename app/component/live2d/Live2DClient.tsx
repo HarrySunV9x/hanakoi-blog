@@ -4,6 +4,12 @@ import * as PIXI from 'pixi.js';
 import live2D_CSS from "./live2d.module.css";
 const { Live2DModel } = require('pixi-live2d-display/lib/cubism4');
 
+declare global {
+  interface Window {
+    PIXI: typeof PIXI;
+  }
+}
+
 if (typeof window !== 'undefined') {
   window.PIXI = PIXI;
   Live2DModel.registerTicker(PIXI.Ticker);
@@ -12,7 +18,7 @@ if (typeof window !== 'undefined') {
 export default function Live2DClient() {
   useEffect(() => {
     const app = new PIXI.Application({
-      view: document.getElementById('canvas'),
+      view: document.getElementById('canvas') as HTMLCanvasElement,
       autoStart: true,
       resizeTo: window,
       transparent: true, // 设置透明背景
